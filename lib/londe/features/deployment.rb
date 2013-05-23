@@ -10,8 +10,10 @@ module Londe
 
 
     setup do
-      gem 'capistrano'
-      gem 'capistrano_colors'
+      gem_group :development do
+        gem 'capistrano'
+        gem 'capistrano_colors'
+      end
 
       # TODO add deployment recipe
     end
