@@ -15,6 +15,8 @@ module Londe
       gem_group :assets do
         gem 'stylus', '~> 0.6', :require => false
       end
+
+      # TODO adicionar normalize.css
     end
 
 

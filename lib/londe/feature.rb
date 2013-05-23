@@ -20,7 +20,7 @@ module Londe
 
         Dir["#{Composer.features_dir}/*"].each do |filename|
           require filename
-          feature = "Londe::#{filename.split('/').last.gsub('.rb','').classify}".constantize
+          feature = "Londe::#{filename.split('/').last.gsub('.rb','').camelize}".constantize
           raise "Feature #{feature} needs a type!" if feature.type.nil?
           @features[feature.type] << feature
         end

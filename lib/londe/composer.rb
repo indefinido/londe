@@ -15,6 +15,8 @@ module Londe
       def compose base
         @app_base = base
 
+        source_paths << File.dirname(File.expand_path(__FILE__))
+
         builders = []
 
         say_status :setup, "Default features...", :blue

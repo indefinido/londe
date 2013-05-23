@@ -23,7 +23,7 @@ module Londe
 
 
     builder do
-      name = ask "Give a name to your pow app (app name is default): "
+      name = ask "Give a name to your pow app (default to '#{app_name}'): "
       run "powify create #{name}"
     end
 
