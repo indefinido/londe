@@ -11,7 +11,7 @@ module Londe
 
     setup do
       gem_group :development do
-        gem 'capistrano'
+        gem 'capistrano', '< 2.13.5' # greater version come with a strange bug oO
         gem 'capistrano_colors'
       end
 
