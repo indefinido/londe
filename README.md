@@ -13,4 +13,8 @@ A binary can be created to generate the entire application, like:
 ```
 
 ### Support to RVM
-Once it becomes a gem, we can set the entire ruby environment before running the Rails generator
+Once it becomes a gem, we can set the entire ruby environment before running the Rails generator.
+
+
+### Use variables across steps during setup
+Like getting some output from the setup step and use to save later as instructions.

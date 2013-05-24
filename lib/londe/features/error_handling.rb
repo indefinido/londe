@@ -23,14 +23,14 @@ module Londe
     builder do
       key = ask "Enter your Airbrake API key:"
       say "Configuring API key..."
-      generate :airbrake, "--api-key #{key}"
+      quietly { generate :airbrake, "--api-key #{key}" }
       say "API key set as '#{key}'"
       say "Testing airbrake via \"rake airbrake:test\"."
       say "Please, check if you received the exception."
     end
 
     instructions <<-INSTRUCTIONS
-      Check at http://airbrake.io if you received the exception.
+Check at http://airbrake.io if you received a test exception.
     INSTRUCTIONS
 
 

@@ -47,16 +47,20 @@ module Londe
           builder unless skip?
         end
 
+        def build!
+          @builder.call
+        end
+
 
         # define the feature builder
         def builder &block
           if block_given?
             @builder = Proc.new do
               say_name
+              block.call
               shell.padding += 1
               save_instructions if instructions.present?
               shell.padding -= 1
-              block.call
             end
           else
             @builder
@@ -88,7 +92,7 @@ module Londe
         # or return the stored instructions
         def instructions str = nil, &block
           return @instructions if str.nil? && !block_given?
-          @instructions = str || instance_eval(&block)
+          @instructions = str || block.call
         end
         # skip the feature building
         def skip

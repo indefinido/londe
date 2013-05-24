@@ -10,7 +10,7 @@ module Londe
 
 
     setup do
-      git init: '--quiet'
+      git :init
 
       # TODO move to template
       create_file '.gitignore', <<-GITIGNORE

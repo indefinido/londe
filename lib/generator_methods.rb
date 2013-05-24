@@ -25,10 +25,6 @@ module Londe
         quietly { super *args }
       end
 
-      def generate *args
-        quietly { super *args }
-      end
-
     end
 
 

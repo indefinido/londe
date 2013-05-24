@@ -17,28 +17,24 @@ module Londe
 
         source_paths << File.dirname(File.expand_path(__FILE__))
 
-        builders = []
+        features = []
 
         say_step :setup, "Default features..."
         shell.padding += 1
-        Feature.all(:default).each do |feature|
-          builders << feature.setup!
-        end
+        Feature.all(:default).each(&:setup!)
         shell.padding -= 1
 
         say_step :setup, "Optional features..."
         shell.padding += 1
-        Feature.all(:optional).each do |feature|
-          builders << feature.setup!
-        end
+        Feature.all(:optional).each(&:setup!)
         shell.padding -=1
 
         #run 'bundle install'
 
         say_step :build, "Building requested features..."
         shell.padding += 1
-        builders.each do |builder|
-          builder.call if builder.is_a? Proc
+        (Feature.all(:default) + Feature.all(:optional)).each do |feature|
+          feature.build! unless feature.skip?
         end
         shell.padding -= 1
       end
