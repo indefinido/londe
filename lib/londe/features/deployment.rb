@@ -17,8 +17,11 @@ module Londe
 
       # TODO add deployment recipes
 
-      # create staging environment
-      # copy production.rb to staging.rb environment
+      # TODO create staging environment
+      #   copy production.rb to staging.rb environment
+
+      # TODO test this
+      template 'templates/deployment/config/unicorn.rb', 'config/unicorn.rb'
     end
 
 
@@ -26,7 +29,9 @@ module Londe
     end
 
     instructions <<-INSTRUCTIONS
-TODO: dar instruções do que mais fazer!
+Unicorn:
+  Created default config within config/unicorn.rb
+  You may need to change the APP_PATH depending on your deployment path.
     INSTRUCTIONS
 
 
