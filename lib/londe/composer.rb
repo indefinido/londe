@@ -34,7 +34,7 @@ module Londe
         say_step :build, "Building requested features..."
         shell.padding += 1
         (Feature.all(:default) + Feature.all(:optional)).each do |feature|
-          feature.build! unless
+          feature.build! unless feature.skip?
         end
         shell.padding -= 1
       end

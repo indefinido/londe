@@ -73,6 +73,7 @@ GITIGNORE
     end
 
     instructions <<-INSTRUCTIONS
+Remind to make the first commit!
     INSTRUCTIONS
 
   end
