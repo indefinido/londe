@@ -41,14 +41,17 @@ module Londe
             shell.padding += 1
             setup
             shell.padding -= 1
+            done
           else
             skip
+            skipped
           end
           builder unless skip?
         end
 
         def build!
           @builder.call
+          done
         end
 
 
@@ -149,7 +152,7 @@ module Londe
         def want_to_install?
           say "Want to install #{name} feature?"
           detail
-          no? "[Y/n]"
+          yes? "[y/n]"
         end
 
         def detail
@@ -159,6 +162,14 @@ module Londe
             say line
           end
           shell.padding -= 1
+        end
+
+        def done
+          say_status :done, "", :green
+        end
+
+        def skipped
+          say_status :skipped, "", :red
         end
 
       end

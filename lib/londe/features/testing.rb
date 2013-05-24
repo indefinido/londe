@@ -21,8 +21,8 @@ module Londe
       end
 
       gem_group :test do
-        gem 'shoulda-matchers'
-        gem 'forgery'
+        gem 'shoulda-matchers', '~> 2.1'
+        gem 'forgery'         , '~> 0.5'
       end
 
       gem_group :test, :development do
