@@ -45,9 +45,9 @@ Stylus:
   If you have trouble making Stylus work, try forcing version 0.6.2 (or another possibly working version) in Gemfile.
   Also check the ':require => false'"
 
-Thor:
-
+Component:
   To manage components, run `thor help component`
+  ATTENTION: Do not forget to build the components and require them in the main css and js files.
     INSTRUCTIONS
 
 

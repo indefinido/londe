@@ -152,6 +152,7 @@ module Londe
         def want_to_install?
           say "Want to install #{name} feature?"
           detail
+          # TODO make ENTER behave as "yes"
           yes? "[y/n]"
         end
 

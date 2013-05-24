@@ -25,6 +25,7 @@ module Londe
     builder do
       name = ask "Give a name to your pow app (default to '#{app_name}'): "
       run "powify create #{name}"
+      copy_file 'templates/development_facilities/.powrc', '.powrc'
     end
 
     instructions do
