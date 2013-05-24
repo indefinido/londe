@@ -57,11 +57,20 @@ development:
     # use_activesupport_time_zone: true
 
     # Ensure all times are UTC in the app side. (default: false)
-    # use_utc: false
+    # use_utc: false                                           
+    
 test:
   sessions:
     default:
       database: <%= app_name.underscore %>_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong                                   
+staging:
+  sessions:
+    default:
+      database: <%= app_name.underscore %>_staging
       hosts:
         - localhost:27017
       options:
