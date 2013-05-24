@@ -169,7 +169,7 @@ module Londe
         end
 
         def skipped
-          say_status :skipped, "", :red
+          say_status :skip, "", :yellow
         end
 
       end

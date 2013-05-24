@@ -29,12 +29,12 @@ module Londe
         Feature.all(:optional).each(&:setup!)
         shell.padding -=1
 
-        #run 'bundle install'
+        run 'bundle install'
 
         say_step :build, "Building requested features..."
         shell.padding += 1
         (Feature.all(:default) + Feature.all(:optional)).each do |feature|
-          feature.build! unless feature.skip?
+          feature.build! unless
         end
         shell.padding -= 1
       end

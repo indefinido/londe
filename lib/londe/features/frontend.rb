@@ -13,6 +13,7 @@ module Londe
       # TODO check for npm and ask for skipping
 
       gem 'haml-rails', '~> 0.4.0'
+      gem 'simple_form'
 
       gem_group :assets do
         gem 'stylus', '~> 0.6', :require => false
@@ -23,12 +24,15 @@ module Londe
 
 
     builder do
+      # stylus
+      copy_file 'templates/frontend/config/initializers/stylus.rb', "config/initializers/stylus.rb"
+
+      # nib
       run 'npm install nib'
 
-      file "config/initializers/stylus.rb", <<-INITIALIZER
-require 'stylus'
-Stylus.use :nib
-      INITIALIZER
+      # simple_form
+      bootstrap = yes? "Simple Form with Twitter Bootstrap? [y/n]:"
+      generate 'simple_form:install', (bootstrap ? "--bootstrap" : nil)
     end
 
 
