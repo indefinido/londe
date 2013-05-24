@@ -64,6 +64,8 @@ test/dummy/public/clicktale/*
 .project
 .loadpath
 GITIGNORE
+
+      # TODO first commit with link to "She's alive, she's alive!" from "The Last Night Of The Kings - Van Canto"
     end
 
 

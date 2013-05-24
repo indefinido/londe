@@ -25,17 +25,8 @@ module Londe
         quietly { super *args }
       end
 
-      # Change the current destination to the destination provided, temporalely
-      def to destination
-        current_destination = destination_root
-
-        say_status :to, destination
-        shell.padding += 1
-
-        self.destination_root = "#{destination_root}/#{destination}"
-        yield
-        self.destination_root = current_destination
-        shell.padding -= 1
+      def generate *args
+        quietly { super *args }
       end
 
     end

@@ -127,7 +127,7 @@ module Londe
       module Helpers
 
         def say_name
-          say_status :feature, name, :blue
+          say_status :feature, set_color(name,:blue), :blue
         end
 
         # save instructions to TODO file

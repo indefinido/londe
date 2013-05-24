@@ -10,6 +10,8 @@ module Londe
 
 
     setup do
+      # TODO check for npm and ask for skipping
+
       gem 'haml-rails', '~> 0.4.0'
 
       gem_group :assets do
