@@ -21,9 +21,9 @@ module Londe
         Composer.app_base.gem *args
       end
 
-      def run *args
-        quietly { super *args }
-      end
+      # def run *args
+      #   quietly { super *args }
+      # end
 
     end
 
