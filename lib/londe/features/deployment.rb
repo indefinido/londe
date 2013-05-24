@@ -15,7 +15,10 @@ module Londe
         gem 'capistrano_colors'
       end
 
-      # TODO add deployment recipe
+      # TODO add deployment recipes
+
+      # create staging environment
+      # copy production.rb to staging.rb environment
     end
 
 
