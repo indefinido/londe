@@ -14,10 +14,8 @@ module Londe
     end
 
 
-    builder do
-      silence_stream(STDOUT) do
-        generate 'devise:install'
-      end
+    builder do                 
+      generate 'devise:install'
     end
 
     instructions do
