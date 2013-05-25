@@ -13,29 +13,30 @@ module Londe
 
     setup do
       gem_group :development do
-        gem 'guard-rspec'     , '~> 3.0'
-        gem 'guard-livereload', '~> 1.4'
-        gem 'guard-konacha'   , '~> 0.3'
-        gem 'guard-bundler'   , '~> 1.0'
-        gem 'guard-pow'       , '~> 1.0'
+        gem 'guard-rspec'       , '~> 3.0'
+        gem 'guard-livereload'  , '~> 1.4'
+        gem 'guard-konacha'     , '~> 0.3'
+        gem 'guard-bundler'     , '~> 1.0'
+        gem 'guard-pow'         , '~> 1.0'
       end
 
       gem_group :test do
-        gem 'shoulda-matchers', '~> 2.1'
-        gem 'forgery'         , '~> 0.5'
+        gem 'shoulda-matchers'  , '~> 2.1'
+        gem 'forgery'           , '~> 0.5'
       end
 
       gem_group :test, :development do
-        gem 'cpf_faker'       , '~> 1.3'
-        gem 'rspec-rails'     , '~> 2.13'
-        gem 'mongoid-rspec'   , '~> 1.8'
-        gem 'capybara'        , '~> 2.1'
-        gem 'launchy'         , '~> 2.3'
-        gem 'database_cleaner', '~> 1.0'
-        gem 'fabrication'     , '~> 2.7'
-        gem 'konacha'         , '~> 2.7'
-        gem 'rb-fsevent'      , require: false
-        gem 'growl'           , '~> 1.0'
+        gem 'cpf_faker'         , '~> 1.3'
+        gem 'rspec-rails'       , '~> 2.13'
+        gem 'mongoid-rspec'     , '~> 1.8'
+        gem 'capybara'          , '~> 2.1'
+        gem 'launchy'           , '~> 2.3'
+        gem 'database_cleaner'  , '~> 1.0'
+        gem 'fabrication'       , '~> 2.7'
+        gem 'konacha'           , '~> 2.7'
+        gem 'selenium-webdriver', '~> 2.32'
+        gem 'growl'             , '~> 1.0'
+        gem 'rb-fsevent'        , require: false
       end
     end
 
