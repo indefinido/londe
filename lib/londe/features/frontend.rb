@@ -16,7 +16,7 @@ module Londe
       gem 'simple_form'
 
       gem_group :assets do
-        gem 'stylus', '~> 0.6', :require => false
+        gem 'stylus', '~> 0.6'
       end
 
     end
