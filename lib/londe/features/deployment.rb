@@ -15,6 +15,11 @@ module Londe
         gem 'capistrano_colors'
       end
 
+      group :production do
+        gem 'therubyracer'
+        gem 'unicorn'
+      end
+
       # TODO add deployment recipes
 
       # TODO create staging environment
@@ -31,7 +36,10 @@ module Londe
     instructions <<-INSTRUCTIONS
 Unicorn:
   Created default config within config/unicorn.rb
-  You may need to change the APP_PATH depending on your deployment path.
+  ATTENTION:
+   - You may need to change the APP_PATH depending on your deployment path.
+   - If you are using ActiveRecord, uncomment the lines inside the config/unicorn.rb, inside the before_fork and after_fork hooks that do connection stuff.
+
     INSTRUCTIONS
 
 
