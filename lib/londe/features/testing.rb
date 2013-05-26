@@ -53,6 +53,9 @@ module Londe
 
       run 'guard init'
 
+      # gem 'konacha'
+      directory 'templates/testing/spec/javascripts', 'spec'
+
       # gem 'rspec-rails'
       copy_file 'templates/testing/.rspec', '.rspec'
 
