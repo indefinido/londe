@@ -46,17 +46,18 @@ COMPONENT
     empty_directory "vendor/assets/components"
   end
 
-
-  desc "install [PATH]", "Install components to PATH, defaulted to ./vendor/components"
-  def install path="vendor/components"
-    run "component install --out #{path}"
+  desc "install [COMPONENTS] [PATH]", "Install/Update COMPONENTS  to PATH, defaulted to all components on path ./vendor/components"
+  def install component = "", path = "vendor/components"
+    run "component install #{component} --out #{path}"
   end
 
+  desc "search QUERY", "Search components repository for a given component"
+  def search query
+    run "component search #{query}"
+  end
 
   desc "build [PATH]", "Build components to PATH, defaulted to ./vendor/assets/components"
   def build path="vendor/assets/components"
     run "component build --out #{path}"
   end
-
-
 end
