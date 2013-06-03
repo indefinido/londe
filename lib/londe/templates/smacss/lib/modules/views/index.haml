@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title Modules
+    %link{ rel: 'stylesheet', href: '/assets/application.css', type: 'text/css' }
+
+
+    %style
+      :plain
+        .colors {
+          display: -webkit-box;
+          -webkit-box-orient: horizontal;
+          -webkit-box-align: center;
+          -webkit-box-pack: center;
+        }
+        .color {
+          height: 60px;
+          text-align: center;
+          width: 100px;
+        }
+
+
+  %body
+    %div.colors
+      - @colors.each do |color|
+        %div.color{ style: "background-color: #{color}" }
+    %div.colors
+      - @colors.each do |color|
+        %div.color{ style: "color: #{color}" }= color

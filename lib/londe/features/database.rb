@@ -37,7 +37,7 @@ require "sprockets/railtie"
         comment_lines file, data
       end
 
-      template 'templates/database/config/mongoid.yml', 'config/mongoid.yml'
+      template 'templates/database/config/mongoid.yml.erb', 'config/mongoid.yml'
     end
 
 

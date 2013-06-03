@@ -15,7 +15,7 @@ module Londe
         gem 'capistrano_colors'
       end
 
-      group :production do
+      gem_group :production do
         gem 'therubyracer'
         gem 'unicorn'
       end
@@ -26,7 +26,7 @@ module Londe
       #   copy production.rb to staging.rb environment
 
       # TODO test this
-      template 'templates/deployment/config/unicorn.rb', 'config/unicorn.rb'
+      template 'templates/deployment/config/unicorn.rb.erb', 'config/unicorn.rb'
     end
 
 
