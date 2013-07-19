@@ -2,7 +2,7 @@ class Component < Thor
   include Thor::Actions
 
   COMPONENTS = {
-    "necolas/normalize.css" => "v1"
+    "necolas/normalize.css" => "v2"
   }
 
   desc "create", "Create basic structure to use Component components."
