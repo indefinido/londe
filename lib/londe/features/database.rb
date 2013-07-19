@@ -14,6 +14,8 @@ module Londe
       # add gem
       gem 'mongoid', '~> 3.0'
 
+      # TODO remove sqlite gem
+
       # comment out all active record mentions
       inside 'config' do
         files = ['application.rb'] + Dir['environments/*']
